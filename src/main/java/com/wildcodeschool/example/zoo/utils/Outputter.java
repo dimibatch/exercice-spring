@@ -43,6 +43,10 @@ public class Outputter implements CommandLineRunner {
         LOG.info("******************");
         LOG.info("The second animal is a " + tempAnimal.getSpecies());
         
+        //Update du premier animal
+        animal1.setSpecies("Bear");
+        animalRepository.save(animal1);
+        
         //Suppression du second animal
         animalRepository.deleteById(2L);
         
